@@ -1,0 +1,48 @@
+@section('title', 'Categories')
+<x-app-layout>
+  <x-slot name="header">
+    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+    {{ __('Categories of Product') }}
+    </h2>
+  </x-slot>
+
+  <div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <a href="{{ route('add-new-category') }}" class="btn btn-primary">+ Add New Category</a>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Category Name</th>
+            <th>Product Quantity</th>
+            <th>Option</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Elektronik</td>
+            <td>25</td>
+            <td>
+              <a href="{{ route('edit-category') }}" class="btn btn-sm btn-warning">Edit</a>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Pakaian</td>
+            <td>40</td>
+            <td>
+              <a href="{{ route('edit-category') }}" class="btn btn-sm btn-warning">Edit</a>
+              <button class="btn btn-sm btn-danger">Delete</button>
+            </td>
+          </tr>
+    <!-- Tambah baris lainnya sesuai kebutuhan -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</x-app-layout>
